@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* Search styles */
+/* 
+.main-container {
+  width: 300px;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-container,
+#result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.search-container h2 {
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.search-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container form label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(116, 114, 114);
+}
+
+#search-input,
+#search-btn {
+  align-self: center;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 0 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}
+
+#search-btn {
+  font-size: 1.1rem;
+  color: gray;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#search-btn:hover {
+  color: white;
+  background-color: blue;
+  border: none;
+}
+
+#result-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#result-container ul li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(44, 43, 43);
+} */
+
+/* Table styles */
+
+.contacts-list {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contacts-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-list table th {
+  background-color: lightgray;
+  height: 2rem;
+  text-align: left;
+  padding-left: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.contacts-list table tbody tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.contacts-list table td {
+  height: 50px;
+  padding-left: 0.8rem;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.contacts-list table td img {
+  display: block;
+  margin: auto 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Pagination styles */
+
+.pagination {
+  min-width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pagination button {
+  height: 2rem;
+  width: 4rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  color: gray;
+}
+
+.pagination button:disabled {
+  color: lightgray;
+  cursor: auto;
+}
+
+#page-count {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.pagination div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination div p {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.pagination input {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 0.5rem;
+  background-color: inherit;
+  padding: 0 0.5rem;
+  border: 1px solid lightgray;
+}

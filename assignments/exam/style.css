@@ -1,0 +1,36 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-form {
+  min-width: 30vw;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.color-form input {
+  height: 52px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+.color-form button {
+  height: 52px;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-size: 26px;
+}
+.color-form button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
