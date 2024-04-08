@@ -4,15 +4,23 @@
  * */
 
 const calculation1 = (num) => {
-  return new Promise((resolve, rej) => {
-    resolve(num + 5);
-  });
+  return new Promise((resolve, reject) => {
+    try {
+      if (typeof num !== 'number') throw new Error('is not a number');
+      resolve(num);
+    } catch (error) {
+      reject(error);
+    }
+  })
+    .then((result) => result + 5)
+    .then((result) => result * 3)
+    .then((result) => result - 2)
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
 };
 
-calculation1(2)
-  .then((result) => new Promise((resolve, rej) => resolve(result * 3)))
-  .then((result) => new Promise((resolve, rej) => resolve(result - 2)))
-  .then((result) => console.log(result));
+calculation1(5);
+calculation1('5');
 
 /**Exercise 2: String Manipulation
  * Write a promise chain that takes a string, converts it to uppercase, then reverses it,
@@ -22,17 +30,15 @@ calculation1(2)
 
 const stringManipulation = (text) => {
   return new Promise((resolve, rej) => {
-    resolve(text.toUpperCase());
-  });
+    resolve(text);
+  })
+    .then((text) => text.toUpperCase())
+    .then((text) => text.split('').reverse().join(''))
+    .then((text) => text + '-finished')
+    .then((text) => console.log(text));
 };
 
-stringManipulation('Hello World!')
-  .then(
-    (text) =>
-      new Promise((resolve, rej) => resolve(text.split('').reverse().join('')))
-  )
-  .then((text) => new Promise((resolve, rej) => resolve(text + '-finished')))
-  .then((text) => console.log(text));
+stringManipulation('Hello World!');
 
 /**
  * Exercise 3: Array Filtering and Mapping
